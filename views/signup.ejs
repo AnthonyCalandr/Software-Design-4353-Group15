@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">FQuote</h2>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/profile">PROFILE</a></li> 
+            <li><a href="/fuelQuoteForm">FUEL QUOTE</a></li>
+            <li><a href="/fuelQuoteHistory">HISTORY</a></li>
+          </ul>
+        </div>
+      </div>
+
+        <form action = "/signup" class = "create" method = "POST">
+          <h2 class="accTitle">Account Creation</h2>
+          <input type="username" id = "username" name="username" placeholder="Username" required autofocus>
+          <input type="password" id = "password" name="password" placeholder="Password" required>
+          <input type="password" id = "passwordC" name="passwordC" placeholder="Confirm Password" required>
+          <button class="btnC" type = "submit"><a href="/">Create Account</a></button>
+          <p class="llink">Already have an account?<br>
+          <a href="/login">Login</a></p>
+        </form>
+        
+    </div>
+  </body>
+</html>

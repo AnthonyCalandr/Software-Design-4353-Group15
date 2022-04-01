@@ -1,0 +1,500 @@
+/* Universal selector to reset the margin and border to zero */
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Controls the background image */
+  .main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(crude-oil.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+  }
+  
+  /* Controls the navigation bar e.g. FQuote, home, profile, and fuel quote */
+  .navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+  }
+  
+  /* Contorls the position of the icon/logo e.g. FQuote top left of website  */
+  .icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+  }
+  
+  /* Controls the look of icon/logo e.g. FQuote top left of website */
+  .logo{
+    color: #FF8C00;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+  }
+  
+  /* Controls the navigation components e.g. home, profile, and fuel quote  */
+  .menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+  }
+  
+  /*list for menu that controls the position*/
+  ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*list for menu that controls the spacing */
+  ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+  }
+  
+  /*list for menu that controls the look */
+  ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+  }
+  
+  /*adds animation when hovering over the menu e.g home, profile, and fuel quote */
+  ul li a:hover{
+    color: #FF8C00;
+  }
+
+  .logOut{
+    width: 100px;
+    height: 40px;
+    background: #FF8C00;
+    border: none;
+    margin-right: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+    transition: 0.4s ease;  
+  }
+  /* Adds hover animation for login button */
+  .logOut:hover{
+    background: white;
+    color: #FF8C00;
+  }
+  
+  /* Controls the look of login text inside login button  */
+  .logOut a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Controls the position of content displayed on website e.g. information and login  */
+  .content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: white;
+    position: relative;
+  }
+  
+  /* Controls the description e.g. a software application that will predict the rate of fuel */
+  .content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+  }
+  
+  /* Controls the look of heading1 e.g. Fuel Quote & Prediction Software */
+  .content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+  }
+  
+  /* Controls the contact button e.g. JOIN US */
+  .content .cn{
+    width: 160px;
+    height: 40px;
+    background: #FF8C00;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+  }
+  
+  /* Controls the contact button e.g. JOIN US */
+  .content .cn a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+  }
+  
+  /* Adds animation when hovering over JOIN US */
+  .cn:hover{
+    background-color: white;
+  }
+  
+  /* Controls the look of a certain part of heading1 e.g. Prediction  */
+  .content span{
+    color: #FF8C00;
+    font-size: 60px;
+  }
+  
+  /* Controls the login background position*/
+  .login{
+    width: 250px;
+    height: 270px;
+    background: linear-gradient(to top,rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    border-radius: 10px;
+    padding: 25px;
+  }
+  
+  /* Controls the look of the input login boxes e.g. username and password */
+  .login input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #FF8C00;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-left: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+  }
+  
+  /* Controls the look of the input login boxes when clicked on e.g username and password */
+  .login input:focus{
+    outline: none;
+  }
+  
+  
+  /* Controls the look of the default text displayed for input login boxes e.g. username and password */
+  ::placeholder{
+    color: white;
+    font-family: Arial;
+  }
+  
+  /* Controls the look for the login button */
+  .btn{
+    width: 240px;
+    height: 40px;
+    background: #FF8C00;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s ease;
+  }
+  
+  /* Adds hover animation for login button */
+  .btn:hover{
+    background: white;
+    color: #FF8C00;
+  }
+  
+  /* Controls the look of login text inside login button  */
+  .btn a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Controls the look of sign up text e.g Don't have an account? Sign up here*/
+  .login .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  /* Controls the look for the link "Sign up here" */
+  .login .link a{
+    text-decoration: none;
+    color: #FF8C00;
+  }
+  
+  /* Controls the look for the Create button */
+  .btnC{
+    width: 390px;
+    height: 40px;
+    background: #FF8C00;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s ease;
+  }
+  
+  /* Adds hover animation for create button */
+  .btnC:hover{
+    background: white;
+    color: #FF8C00;
+  }
+  
+  /* Controls the look of create text inside create button  */
+  .btnC a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /*Controls the creation background position*/
+  
+  .create{
+    width: 400px;
+    height: 350px;
+    background: linear-gradient(to top,rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+    position: relative;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 25px;
+  }
+  
+  .create input{
+    width: 390px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #FF8C00;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-left: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+  }
+  
+  .create input:focus{
+    outline: none;
+  }
+
+  .llink{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .llink a{
+    text-decoration: none;
+    color: #FF8C00;
+  }
+
+  /* Controls the look of the title for Account creation page*/
+  .accTitle{
+    color: #FF8C00;
+    font-size: 35px;
+    font-family: Arial;
+    position: relative;
+    left: 0%;
+  }
+  
+  /* Controls the background of the profile management page */
+  .profile{
+    width: 400px;
+    height: 525px;
+    background: linear-gradient(to top,rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+    position: relative;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 25px;
+  }
+  
+  .profile input{
+    width: 390px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #FF8C00;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-left: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+  }
+  
+  .profile input:focus{
+    outline: none;
+  }
+  
+  .profile select{
+    width: 390px;
+    height: 35px;
+    background: transparent;
+    border: 1px solid #FF8C00;
+    color: white;
+    margin-top: 45px;
+    font-size: 18px;
+  }
+  
+  .profile option{
+    background-color: black;
+  }
+  
+  /* Controls the look of the Fuel Quote Submission */
+  .quote {
+      width: 400px;
+      height: 460px;
+      background: linear-gradient(to top,rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+      position: relative;
+      top: 7%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 10px;
+      padding: 25px;
+      color: white;
+  }
+  
+  /* Controls the look of the input of the Fuel Quote Submission page */
+  .quote input{
+      width: 390px;
+      height: 35px;
+      background: transparent;
+      border-bottom: 1px solid #FF8C00;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-left: none;
+      color: white;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-top: 30px;
+      font-family: sans-serif;
+      content: attr(placeholder) !important;
+      color: white;
+      margin-right: 0.5em;
+      color-scheme: dark;
+    }
+    input[type="date"]:focus:before,
+    input[type="date"]:valid:before {
+      content: "";
+  }
+  
+  /* Controls the look of the Fuel Quote Submission Title */
+  .quoteTitle{
+    color: #FF8C00;
+    font-size: 35px;
+    font-family: Arial;
+    position: relative;
+    left: 0%;
+  }
+  
+  /* Controls the look of the Fuel Quote Submission button */
+  .quote button{
+      width: 390px;
+      height: 40px;
+      background: #FF8C00;
+      border: none;
+      margin-top: 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+      transition: 0.4s ease;
+  }
+  
+  /* Controls the look of the Fuel Quote Submission button when you hover over it */
+  .quote button:hover{
+    background: white;
+    color: #FF8C00;
+  }
+  
+  /* Controls the look of Submit text inside login button  */
+  .quote button a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Controls the Deliver Date Box */
+  .quote input[type="date"]:before {
+      content: attr(placeholder) !important;
+      color: white;
+      margin-right: 0.5em;
+    }
+  .quote input[type="date"]:focus:before
+  .quote input[type="date"]:valid:before {
+      content: "";
+      font-size: 15px;
+      font-family: sans-serif;
+      color: white;
+    }
+  
+  /*Controls the look of the Fuel Quote history table */
+  .history{
+      width: 1200px;
+      height: auto;
+      margin: auto;
+      color: white;
+      position: relative;
+      top: 10%;
+  
+  
+      background: linear-gradient(to top,rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+      position: relative;
+      top: 7%;
+      left: 35%;
+      transform: translateX(-50%);
+      border-radius: 10px;
+      padding: 25px;
+  }
+  
+  /*Controls the look of the Fuel Quote history table */
+  .history table{
+      border-spacing:15px;
+  }
+  
+  /*Controls the look of the Fuel Quote history table headers */
+  .history th{
+      width: 200px;
+      font-size: 20px;
+      font-family: sans-serif;
+      color:#FF8C00;
+  }
+  
+  /*Controls the look of the Fuel Quote history cells */
+  .history td{
+      width: 300px;
+      font-size: 16px;
+      font-family: sans-serif;
+      text-align: center;
+  }

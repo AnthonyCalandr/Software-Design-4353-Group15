@@ -1,0 +1,46 @@
+<h1></h1>
+<% if (messages.error) { %> 
+    <%= messages.error %> 
+<% } %> 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FQuote</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">FQuote</h2>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/profile">PROFILE</a></li>
+            <li><a href="/fuelQuoteForm">FUEL QUOTE</a></li>
+            <li><a href="/fuelQuoteHistory">HISTORY</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="content">
+        <h1>Fuel Quote & <br><span>Prediction</span> <br>Software</h1>
+        <p class="par">a software application that will predict the rate of fuel</p>
+        <button class="cn"><a href="/signup">JOIN US</a></button>
+
+        <form action = "/login" method = "POST">
+          <div class="login">
+            <input type="username" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button class="btn"><a>Login</a></button>
+            <p class="link">Don't have an account?<br>
+            <a href="/signup">Sign up here</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
