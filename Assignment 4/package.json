@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.0",
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15"
   }
 }
