@@ -2,7 +2,6 @@
 <div class="history">		
   <table>
     <tr>
-      <th>Client</th>
       <th>Gallons Requested</th>
       <th>Delivery Address</th>
       <th>Delivery Date</th>
@@ -10,13 +9,16 @@
       <th>Total Amount Due</th>
     </tr>
     <tr>
-      <td>Mike Johnson</td>
-      <td>123</td>
-      <td>123 Main St</td>
-      <td>01/22/2022</td>
-      <td>$59,000</td>
-      <td>$59,000</td>
+      <% if (fuelHistory) { %>
+        <% fuelHistory.forEach(function(data) { %>
+        <tr>
+          <td> <%=data.gallons %> </td>
+          <td> <%=data.address %> </td>
+          <td> <%=data.date %> </td>
+          <td> <%=data.price %> </td>
+          <td> <%=data.total %> </td>
+        </tr>
+      <%  }) } %>
     </tr>
-  
   </table>
 </div>

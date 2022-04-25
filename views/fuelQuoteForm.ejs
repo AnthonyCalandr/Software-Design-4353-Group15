@@ -1,11 +1,66 @@
 <%- include('./partials/logout.ejs') %>
-<div class="quote">
-  <h1 class="quoteTitle">Fuel Quote Submission</h1><br>
-  <input type="number" name="gallonsRequested" placeholder="Gallons Requested" required><br>
-  <input type="text" name="deliveryAddress" placeholder="Delivery Address"><br>
-  <input type="date" id="quote" name="deliveryDate" placeholder="Choose a Delivery Date"<br>
-  <input type="text" name="suggestedPrice" placeholder="Suggested Price"><br>
-  <input type="text" name="totalAmountDue" placeholder="Total Amount Due"><br>
 
-  <button><a href="/">Submit</a></button><br>
-</div>
+<form action = "/user/fuelQuoteInfo" method = "POST">
+  <div class="quote">
+    <h1 class="quoteTitle">Fuel Quote Submission</h1><br>
+    <p id = "quote" class ="display-none"><%=quote%></p>
+    <p id = "state" class ="display-none"> <%=state%></p>
+    <input type="number" id = "formGallons" name="gallons" placeholder="Gallons Requested" required><br>
+    <input type="text" id = "formAddress" name="address" placeholder="Delivery Address"><br>
+    <input type="date" id="formDate" name="date" placeholder="Choose a Delivery Date"><br>
+    <button id="getQuote" type="button">Get Quote</button>
+    <input type="text" id = "formPrice" name="price" placeholder="Suggested Price/Gallon"><br>
+    <input type="text" id = "formTotal" name="total" placeholder="Total Amount Due"><br>
+    <button><a href="/">Submit</a></button><br>
+  </div>
+</form>
+
+<script>
+  let gallons = document.querySelector("#formGallons")
+
+  let getQuote = document.querySelector("#getQuote")
+  let quote = document.querySelector("#quote")
+  let state = document.querySelector("#state")
+
+  let suggestedPrice = document.querySelector("#formPrice")
+  let totalPrice = document.querySelector("#formTotal")
+
+//Function that will be called whenever the Get Quote button is pressed
+  getQuote.addEventListener('click', (e) => {
+
+    let location = 0
+    let ratehist = 0
+    let price = 0
+    let gallonsreq = 0
+
+//Location Factor = 2% for texas, 4% for out of state
+    if(state.textContent == ' TX'){
+      location = 0.02
+    }else{
+      location = 0.04
+    }
+
+//Rate history factor = 1% if client requested fuel before, 0% if no history
+    if(quote){
+      if(quote.textContent >= 1){
+        ratehist = .01
+      }else{
+        ratehist = 0
+      }
+    }
+
+//Gallons request factor = 2% if more than 100 gallons, 3% if less
+    if(gallons.value > 1000){
+      gallonsreq = 0.02
+    }else{
+      gallonsreq = 0.03
+    }
+
+    let margin = (location - ratehist + gallonsreq + .10 ) * 1.50
+    let suggested = 1.50 + margin  
+    let total = Number(gallons.value) * suggested
+
+    suggestedPrice.value = suggested
+    totalPrice.value = total
+  })
+</script>

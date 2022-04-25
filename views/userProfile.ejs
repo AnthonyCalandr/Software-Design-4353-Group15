@@ -1,0 +1,29 @@
+<%- include('./partials/logout.ejs') %>
+
+<div class="history">
+<% if(info) { %>
+    <table class="profileTable">
+        <tr>
+            <th>Name</th>
+            <th>Primary Address</th>
+            <th>Secondary Address</th>
+            <th>City</th>
+            <th>Zipcode</th>
+            <th>State</th>
+          </tr>
+
+          <tr>
+            <td><%= info.name %></td>
+            <td><%= info.address1 %></td>
+            <td><%= info.address2 %></td>
+            <td><%= info.city %></td>
+            <td><%= info.zipcode %></td>
+            <td><%= info.state %></td>
+          </tr>
+            <p class="edit-profile">       
+            <a href="/user/profile">Edit here</a></p>
+    </table>
+        <% } else{ %>
+            <h1> Please finish setting up your profile </h1> 
+        <% } %>
+</div>
