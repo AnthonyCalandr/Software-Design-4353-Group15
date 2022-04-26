@@ -95,11 +95,11 @@ router.post('/clientProfile', checkAuthenticated, (req, res) => {
 router.get('/fuelQuoteForm', checkAuthenticated, (req,res) => {
     if(req.user.userDetails.length > 0){
 
-    let address = req.user.userDetails[0].address
+    let address1 = req.user.userDetails[0].address1
     let state = req.user.userDetails[0].state
     let quote = req.user.fuelQuotes.length
 
-    res.render('fuelQuoteForm', {address: address, quote: quote, state: state, message: ""})
+    res.render('fuelQuoteForm', {address: address1, quote: quote, state: state, message: ""})
     } else{
         res.render('profile', {message: "Please finish setting up your profile to gain access to fuel quote"})
     }
@@ -109,9 +109,9 @@ router.get('/fuelQuoteForm', checkAuthenticated, (req,res) => {
 router.get('/fuelQuoteHistory', checkAuthenticated, (req,res) => {
     if(req.user.userDetails.length > 0){
     let fuelHistory = req.user.fuelQuotes
-    let date = req.user.userDetails[0].address
+    let address1 = req.user.userDetails[0].address1
 
-    res.render('fuelQuoteHistory', {fuelHistory, deliver: date})
+    res.render('fuelQuoteHistory', {fuelHistory, address: address1})
     } else {
         res.render('profile', {message: "Please finish setting up your profile to gain access to your fuel quote history"})
     }
