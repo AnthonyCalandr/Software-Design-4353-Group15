@@ -5,7 +5,7 @@
     <h1 class="quoteTitle">Fuel Quote Submission</h1><br>
     <p id = "quote" class ="display-none"><%=quote%></p>
     <p id = "state" class ="display-none"> <%=state%></p>
-    <input type="number" id = "formGallons" name="gallons" placeholder="Gallons Requested" required><br>
+    <input type="number" id = "formGallons" name="gallons" placeholder="Gallons Requested" min = 0 required><br>
     <input type="text" id = "formAddress" name="address" placeholder= "Delivery Address:  <%=address%> " value = <%=address%> readonly><br>
     <input type="date" id="formDate" name="date" placeholder="Choose a Delivery Date: "><br>
     <button id="getQuote" type="button">Get Quote</button>
@@ -16,6 +16,10 @@
 </form>
 
 <script>
+
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementsByName("date")[0].setAttribute('min', today);
+
   let gallons = document.querySelector("#formGallons")
 
   let getQuote = document.querySelector("#getQuote")

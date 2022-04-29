@@ -32,7 +32,7 @@ router.post('/signup', checkNotAuthenticated, async(req, res) => {
         if (password.length < 5) {
             return res
                 .status(400)
-                .json({ msg: "The password needs to be at lease 5 characters long."});
+                .json({ msg: "The password needs to be at least 5 characters long."});
         }
 
         //checking database to ensure no duplicate usernames upon signup
